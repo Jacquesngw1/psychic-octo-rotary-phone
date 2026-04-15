@@ -1,0 +1,20 @@
+{
+  "name": "@neuralis/geo-engine",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "echo 'no linter configured'",
+    "test": "echo 'no tests configured'"
+  },
+  "dependencies": {
+    "@neuralis/database": "*",
+    "@neuralis/llm-clients": "*",
+    "bullmq": "^5.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
