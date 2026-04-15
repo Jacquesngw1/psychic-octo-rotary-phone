@@ -1,5 +1,5 @@
 import { Queue } from "bullmq";
-import { PrismaClient, AuditStatus } from "@neuralis/database";
+import { PrismaClient, AuditStatus, Prisma } from "@neuralis/database";
 import { LLMClient } from "@neuralis/llm-clients";
 
 export interface AuditResult {
@@ -99,7 +99,7 @@ export class GEOAuditEngine {
         where: { id: auditId },
         data: {
           status: AuditStatus.COMPLETED,
-          results: result as unknown as Record<string, unknown>,
+          results: JSON.parse(JSON.stringify(result)) as Prisma.InputJsonValue,
         },
       });
 
@@ -124,7 +124,7 @@ export class GEOAuditEngine {
     auditId: string,
     step: string,
     message: string,
-    data?: Record<string, unknown>
+    data?: Prisma.InputJsonValue
   ): Promise<void> {
     await this.prisma.auditLog.create({
       data: {
