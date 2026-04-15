@@ -1,0 +1,24 @@
+{
+  "name": "@neuralis/worker",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "echo 'no linter configured'",
+    "test": "echo 'no tests configured'"
+  },
+  "dependencies": {
+    "@neuralis/database": "*",
+    "@neuralis/geo-engine": "*",
+    "@neuralis/llm-clients": "*",
+    "bullmq": "^5.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  }
+}
