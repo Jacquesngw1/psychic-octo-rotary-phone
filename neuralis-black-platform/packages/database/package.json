@@ -1,0 +1,22 @@
+{
+  "name": "@neuralis/database",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "generate": "prisma generate",
+    "db:push": "prisma db push",
+    "migrate": "prisma migrate dev",
+    "lint": "echo 'no linter configured'",
+    "test": "echo 'no tests configured'"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.14.0",
+    "typescript": "^5.4.0"
+  }
+}
