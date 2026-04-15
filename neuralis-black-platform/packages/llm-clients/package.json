@@ -7,13 +7,16 @@
   "scripts": {
     "build": "tsc",
     "lint": "echo 'no linter configured'",
-    "test": "echo 'no tests configured'"
+    "test": "jest"
   },
   "dependencies": {
-    "openai": "^4.52.0",
-    "@google/generative-ai": "^0.12.0"
+    "@google/generative-ai": "^0.12.0",
+    "openai": "^4.52.0"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9",
     "typescript": "^5.4.0"
   }
 }
