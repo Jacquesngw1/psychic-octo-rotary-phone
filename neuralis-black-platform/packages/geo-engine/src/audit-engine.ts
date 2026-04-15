@@ -131,7 +131,7 @@ export class GEOAuditEngine {
         auditId,
         step,
         message,
-        data: data ?? undefined,
+        data,
       },
     });
   }
